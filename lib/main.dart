@@ -1,3 +1,4 @@
+import 'package:animacoes_flutter/animacoes/animacoes_implicitas.dart';
 import 'package:flutter/material.dart';
 
 main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: "Trabalhando com animações no Flutter",
       debugShowCheckedModeBanner: false,
+      home: AnimacoesImplicitas(),
     );
   }
 }
