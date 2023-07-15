@@ -58,23 +58,69 @@ class _LoginUiState extends State<LoginUi> {
                         )
                       ],
                     ),
-                    child: const Column(
+                    child: Column(
                       children: [
-                        TextField(
-                          decoration: InputDecoration(
-                            hintText: "Email",
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          child: TextField(
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              icon: const Icon(Icons.person),
+                              hintText: "Email",
+                              hintStyle: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: 18,
+                              ),
+                            ),
                           ),
                         ),
-                        TextField(),
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          child: TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              icon: const Icon(Icons.lock),
+                              hintText: "Senha",
+                              hintStyle: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  // const InkWell(
-                  //     // child: ,
-                  //     ),
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromRGBO(255, 100, 127, 1),
+                            Color.fromRGBO(255, 123, 145, 1),
+                          ],
+                        ),
+                      ),
+                      height: 50,
+                      child: const Center(
+                        child: Text(
+                          "Entrar",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                   const SizedBox(
                     height: 10,
                   ),
